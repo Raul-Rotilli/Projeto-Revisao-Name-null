@@ -18,4 +18,13 @@ public class AmarelinhaTestes {
             System.out.println(); // Para pular para a próxima linha após cada linha da matriz
         }
     }
+
+    @Test
+    public void imprimeCidades(){
+        for (int i = 0; i < leitorCSV.indice.size(); i++){
+            System.out.println(leitorCSV.indice.get(i));
+        }
+        System.out.println(leitorCSV.indice);
+    }
+
 }
