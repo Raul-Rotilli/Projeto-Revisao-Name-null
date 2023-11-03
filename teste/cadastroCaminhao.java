@@ -10,7 +10,7 @@ public class cadastroCaminhao {
             this.capacidade = 0;
 
             if(this.Tipo == 1){
-                this.capacidadeTotal = 1000.0;
+                this.capacidadeTotal = 1000.0;=
                 this.valorKm = 5.83;
             }else if(this.Tipo == 2){
                 this.capacidadeTotal = 4000.0;
