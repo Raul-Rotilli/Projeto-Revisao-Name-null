@@ -12,7 +12,7 @@ public class LeitorCSV {
     public ArrayList<String> indice = new ArrayList<>();
 
     public int[][] getMatrizDistancias() {
-        return matrizDistancias;
+        return this.matrizDistancias;
     }
 
 
@@ -27,7 +27,6 @@ public class LeitorCSV {
         String linha = "";
         int linhaAtual = 0;
         String divisorStringCSV = ";";
-
         String[] cidades = null;
         String[] conteudoCSV = null;
         try {
@@ -59,5 +58,40 @@ public class LeitorCSV {
             e.printStackTrace();
         }
     }
+
+    //tranforma a String da cidade informada pelo usuário em um int que serve como indice para localizar as distancias na matriz
+    public int pegaDistancia(String cidade1, String cidade2) {
+        int indiceCidade1;
+        if (this.indice.contains(cidade1) && this.indice.contains(cidade2)) {
+            indiceCidade1 = this.indice.indexOf(cidade1);
+            int indiceCidade2 = this.indice.indexOf(cidade2);
+            return this.matrizDistancias[indiceCidade1][indiceCidade2];
+
+        } else {
+            return 0;
+        }
+
+    }
+
+    public void listarCidades(){
+        int itensPorLinha = 8;
+
+        System.out.println("LISTA DE CIDADES:");
+        System.out.println("_____________________________________________________________________________________________________");
+
+        for (int i = 0; i < this.indice.size(); i++){
+            System.out.print(" |" + this.indice.get(i) + "|");
+            if ((i + 1) % itensPorLinha == 0) {
+                System.out.println();
+            }
+        }
+        System.out.println("_____________________________________________________________________________________________________");
+    }
+
+    public boolean verificaCidade(String cidade){
+        return this.indice.contains(cidade);
+    }
+
+
 
 }

@@ -5,7 +5,10 @@ package com.amarelinha;
 public class Main {
     public static void main(String[] args) {
         LeitorCSV l = new LeitorCSV();
-        l.criarArrays();
+        CadastroCaminhao cc = new CadastroCaminhao(1);
+        l.listarCidades();
+        ListaProdutos lp = new ListaProdutos();
+        lp.selecionarProdutos();
 
     }
 }
