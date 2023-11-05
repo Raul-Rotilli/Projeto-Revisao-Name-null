@@ -1,10 +1,10 @@
 package com.amarelinha;
 
-public class CadastroCaminhao {
+public class Caminhao {
         private int Tipo;
         private double valorKm, capacidade, capacidadeTotal;
 
-        public CadastroCaminhao(int tipo){
+        public Caminhao(int tipo){
             this.Tipo = tipo;
 
             this.capacidade = 0;
