@@ -43,45 +43,46 @@ public class ListaProdutos {
             int quantidade = sInt.nextInt();
 
             switch (item) {
-                case "CELULAR" :
-                    produtosSelecionados.put(item, (quantidade * 0.70));
+                case "CELULAR" -> {
+                    this.produtosSelecionados.put(item, (quantidade * 0.70));
                     this.quantidade.put(item,quantidade);
-
-                case "GELADEIRA" :
-                    produtosSelecionados.put(item, (quantidade * 50.0));
+                }
+                case "GELADEIRA" -> {
+                    this.produtosSelecionados.put(item, (quantidade * 50.0));
                     this.quantidade.put(item,quantidade);
-
-                 case "AIR FRYER" :
-                    produtosSelecionados.put(item, (quantidade * 3.50));
+                }
+                case "AIR FRYER" -> {
+                    this.produtosSelecionados.put(item, (quantidade * 3.50));
                     this.quantidade.put(item,quantidade);
-
-                case "CADEIRA" :
-                    produtosSelecionados.put(item, (quantidade * 5.0));
+                }
+                case "CADEIRA" -> {
+                    this.produtosSelecionados.put(item, (quantidade * 5.0));
                     this.quantidade.put(item,quantidade);
-
-                case "LUMINARIA" :
-                    produtosSelecionados.put(item, (quantidade * 0.80));
+                }
+                case "LUMINARIA" -> {
+                    this.produtosSelecionados.put(item, (quantidade * 0.80));
                     this.quantidade.put(item,quantidade);
-
-                case "LAVADORA DE ROUPA" :
-                    produtosSelecionados.put(item, (quantidade * 15.0));
+                }
+                case "LAVADORA DE ROUPA" -> {
+                    this.produtosSelecionados.put(item, (quantidade * 15.0));
                     this.quantidade.put(item,quantidade);
-
-                case "PLAYSTATION 5" :
-                    produtosSelecionados.put(item, (quantidade * 3.90));
+                }
+                case "PLAYSTATION 5" -> {
+                    this.produtosSelecionados.put(item, (quantidade * 3.90));
                     this.quantidade.put(item,quantidade);
-
-                case "NINTENDO SWITCH" :
-                    produtosSelecionados.put(item, (quantidade * 0.3));
+                }
+                case "NINTENDO SWITCH" -> {
+                    this.produtosSelecionados.put(item, (quantidade * 0.3));
                     this.quantidade.put(item,quantidade);
-
-                default : System.out.println("O produto não está na lista. Tente novamente inserir o produto");
+                }
+                default -> System.out.println("Este produto não está na lista. Verifique a sua ortografia e tente novamente");
+            }
 
             System.out.println("Escolha uma opção: ");
             System.out.println("1 - Continuar adicionando produtos ");
             System.out.println("2 - Sair ");
             sair = sInt.nextInt();
-        }
+
 
     }while(sair != 2);
         System.out.println("Lista de carga: (Produto / Peso total em KG) " + produtosSelecionados);

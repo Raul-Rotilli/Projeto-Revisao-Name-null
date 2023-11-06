@@ -5,13 +5,67 @@ import java.util.ArrayList;
 import java.util.Map;
 
 public class CadastroTransporte extends ListaProdutos{
-    private int caminhoesPequenos, caminhoesMedios, caminhoesGrandes, numeroDeTrechos;
+    private int caminhoesPequenos;
+    private int caminhoesMedios;
+    private int caminhoesGrandes;
+
+    int numeroDeTrechos;
 
     private double custoPorCaminhoesPequenos, custoPorCaminhoesMedios, custoPorCaminhoesGrandes;
     ArrayList<Double> distanciaTrechos = new ArrayList<>();
     ArrayList<Double> precosTotais = new ArrayList<>();
     ArrayList<Double> precosAdicionados = new ArrayList<>();
     DecimalFormat df = new DecimalFormat("###.##");
+
+    public int getCaminhoesPequenos() {
+        return caminhoesPequenos;
+    }
+
+    public int getCaminhoesMedios() {
+        return caminhoesMedios;
+    }
+
+    public int getCaminhoesGrandes() {
+        return caminhoesGrandes;
+    }
+
+
+    public double getCustoPorCaminhoesPequenos() {
+        return custoPorCaminhoesPequenos;
+    }
+
+    public double getCustoPorCaminhoesMedios() {
+        return custoPorCaminhoesMedios;
+    }
+
+    public double getCustoPorCaminhoesGrandes() {
+        return custoPorCaminhoesGrandes;
+    }
+
+    public void setCaminhoesPequenos(int caminhoesPequenos) {
+        this.caminhoesPequenos = caminhoesPequenos;
+    }
+
+    public void setCaminhoesMedios(int caminhoesMedios) {
+        this.caminhoesMedios = caminhoesMedios;
+    }
+
+    public void setCaminhoesGrandes(int caminhoesGrandes) {
+        this.caminhoesGrandes = caminhoesGrandes;
+    }
+
+
+    public void setCustoPorCaminhoesPequenos(double custoPorCaminhoesPequenos) {
+        this.custoPorCaminhoesPequenos = custoPorCaminhoesPequenos;
+    }
+
+    public void setCustoPorCaminhoesMedios(double custoPorCaminhoesMedios) {
+        this.custoPorCaminhoesMedios = custoPorCaminhoesMedios;
+    }
+
+    public void setCustoPorCaminhoesGrandes(double custoPorCaminhoesGrandes) {
+        this.custoPorCaminhoesGrandes = custoPorCaminhoesGrandes;
+    }
 
     public double calculaCustoTotal(ArrayList precosTotais){
         double precoTotal = 0;
@@ -37,10 +91,10 @@ public class CadastroTransporte extends ListaProdutos{
         return calculaCustoTotal(this.precosTotais) / calculaDistanciaTotalDeTrechos(this.distanciaTrechos);
     }
 
-    public void calculaCustoMedioPorProduto(Map<String,Double> selectProducts, Map<String, Integer> productsQuantity, ArrayList<Double> precos){
-        for (Map.Entry<String,Double> chaveAtual : selectProducts.entrySet()){
+    public void calculaCustoMedioPorProduto(Map<String,Double> produtosSelecionados, Map<String, Integer> quantidade, ArrayList<Double> precos){
+        for (Map.Entry<String,Double> chaveAtual : produtosSelecionados.entrySet()){
             if(chaveAtual.getKey() != null && chaveAtual.getValue() != null) {
-                double precoMedioPorProduto = precos.get(0) / productsQuantity.get(chaveAtual.getKey() );
+                double precoMedioPorProduto = precos.get(0) / quantidade.get(chaveAtual.getKey() );
                 System.out.println("O preço médio por " + chaveAtual.getKey() + " é de : R$" + df.format(precoMedioPorProduto));
             }
         }
