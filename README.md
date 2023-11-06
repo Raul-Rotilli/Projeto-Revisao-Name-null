@@ -1,6 +1,6 @@
-# projetoJavaCaldeira-Name-null
+# Projeto de Revisão da Equipe Name NULL
 
-Olá, bem-vindo ao projeto sobre a mercearia liberada(amarelinha), o mesmo foi feito em conjunto entre Gabriela Padilha, Rafael Moraes e Raul Rotilli.
+Olá, bem-vindo ao projeto sobre a Amarelinha Trasportes, o mesmo foi feito em conjunto entre Gabriela Padilha, Rafael Moraes e Raul Rotilli.
 
 ## Intuito do Projeto
 
