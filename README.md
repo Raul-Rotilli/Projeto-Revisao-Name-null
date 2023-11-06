@@ -1,4 +1,4 @@
-# Projeto de Revisão da Equipe Name NULL
+# Projeto de Revisão da Equipe Name: null
 
 Olá, bem-vindo ao projeto sobre a Amarelinha Trasportes, o mesmo foi feito em conjunto entre Gabriela Padilha, Rafael Moraes e Raul Rotilli.
 
